@@ -15,3 +15,6 @@ Se crea la ruta raiz
 
 se muestra Index.html
 ![image](https://github.com/LTEAdmin/pruebaBancoSolar/assets/157530292/ce21ca73-6ecf-4036-972a-db9442210376)
+
+la conexion a la BBDD es corecta, se revisa capturando la fecha desde alli
+![image](https://github.com/LTEAdmin/pruebaBancoSolar/assets/157530292/d02dd1a6-b5f1-40c8-8f43-7b64e2a3d342)
