@@ -3,3 +3,6 @@
 
 Se inicia el desafio creando la BBDD solicitada
 ![image](https://github.com/LTEAdmin/pruebaBancoSolar/assets/157530292/0cf7cc1a-d21b-4a3a-b89c-19456e1314d3)
+
+Se instala espress, se crea el servidor y se prueba, funcionando correctamente
+![image](https://github.com/LTEAdmin/pruebaBancoSolar/assets/157530292/8ede323b-fc17-4d13-837c-c4e37a2fc219)
