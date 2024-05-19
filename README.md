@@ -10,3 +10,8 @@ Se instala espress, se crea el servidor y se prueba, funcionando correctamente
 Configuracion Conexion a BBDD desde la app
 ![image](https://github.com/LTEAdmin/pruebaBancoSolar/assets/157530292/9d48c1ef-2f27-4775-85d0-6b9110c98f13)
 
+Se crea la ruta raiz
+![image](https://github.com/LTEAdmin/pruebaBancoSolar/assets/157530292/18c17916-7817-438c-9e0d-d3c266739ce0)
+
+se muestra Index.html
+![image](https://github.com/LTEAdmin/pruebaBancoSolar/assets/157530292/ce21ca73-6ecf-4036-972a-db9442210376)
