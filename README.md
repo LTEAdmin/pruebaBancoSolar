@@ -21,3 +21,6 @@ la conexion a la BBDD es corecta, se revisa capturando la fecha desde alli
 
 Al revisar la funcion para ingresar usuarios nuevos, se detectan errores y se corrigen, entre otros nombre de la tabla
 ![image](https://github.com/LTEAdmin/pruebaBancoSolar/assets/157530292/fd29b0b7-dd81-462e-bb07-827ba1b041e5)
+
+se inserta correctamente el nuevo usuario de la prueba
+![image](https://github.com/LTEAdmin/pruebaBancoSolar/assets/157530292/186cbcd2-7466-4ffd-803a-53add5b39f10)
