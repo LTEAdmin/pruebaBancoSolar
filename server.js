@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 //static files
-app.use(express.static(path.join(__dirname, "src")));
+app.use(express.static(path.join(__dirname, "/src")));
 
 //routes
 app.use("/", router);

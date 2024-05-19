@@ -5,10 +5,10 @@ import { addUserQuery } from "../database/userQuery.js";
 const router = express.Router();
 const __dirname = import.meta.dirname;
 
-// GET: Devuelve la aplicación cliente disponible en el apoyo de la prueba.
+// GET: Devuelve la aplicación cliente disponible en el apoyo de la prueba. 
 router.get("/", (req, res) => {
     try {
-         res.sendFile(path.join(__dirname, "./views/index.html"));
+         res.sendFile(path.join(__dirname, "../views/index.html"));
      }
     catch (error) {
          console.log("Error: " + error);
@@ -16,16 +16,16 @@ router.get("/", (req, res) => {
 });
 
 // - /usuario POST: Recibe los datos de un nuevo usuario y los almacena en PostgreSQL. 
-router.post("/usuario", async   (req, res) => {
+router.post("/usuario", async (req, res) => {
     try {
         const { nombre, balance } = req.body;
         const datos = [nombre, balance];
 
         const response = await addUserQuery(datos);
-        res.status(200).json(response);
+        res.status(200).json(response.rows);
     }
     catch {
-        res.status(500).json({ error: "Error al ingresar el nuevo usuario" });
+        res.status(500).send({ error: "Error al ingresar el nuevo usuario" });
     }
 });
 
