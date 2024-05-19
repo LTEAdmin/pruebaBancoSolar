@@ -14,5 +14,11 @@ const config = {
 };
 
 const dbase = new Pool(config);
+ const fecha= async() => {
+   const response = await dbase.query("SELECT NOW()");
+   console.log(response.rows); 
+ }
+
+ fecha();
 
 export default dbase;
