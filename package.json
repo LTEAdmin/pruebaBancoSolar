@@ -1,0 +1,13 @@
+{
+  "name": "prueba_banco_solar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type":"module",
+  "scripts": {
+    "start": "node --watch server.js"
+  },
+  "keywords": [],
+  "author": "Alejandra Flaño",
+  "license": "MIT"
+}
