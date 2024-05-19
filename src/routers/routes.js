@@ -1,6 +1,6 @@
 import express from "express";
 import path from "path";
-import { addUserQuery } from "../database/userQuery.js";
+import { addUserQuery, getUserQuery } from "../database/userQuery.js";
 
 const router = express.Router();
 const __dirname = import.meta.dirname;
@@ -30,11 +30,13 @@ router.post("/usuario", async (req, res) => {
 });
 
 // - /usuarios GET: Devuelve todos los usuarios registrados con sus balances.
-router.get("/usuarios", (req, res) => {
+router.get("/usuarios", async (req, res) => {
     try {
+        const response = await getUserQuery();
+        res.status(200).json(response);
     }
     catch { 
-
+        res.status(500).send({ error: "Error al obtener los usuarios" });
     }
 });
 

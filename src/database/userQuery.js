@@ -14,5 +14,19 @@ export const addUserQuery = async (datos) => {
         console.log("Error: " + error);
     }
 }
+
+export const getUserQuery = async () => {
+    try {
+        const sql = {
+            text: "SELECT * FROM usuarios",
+        };
+        const response = await dbase.query(sql);
+        return response.rows;
+    }
+    catch (error) {
+        console.log("Error: " + error);
+    }
+}
 // funcion para realizar prueba de ingreso de usuario
 //addUserQuery(["pedro", 2000]);
+//getUserQuery();
