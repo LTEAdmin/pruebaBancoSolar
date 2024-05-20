@@ -30,7 +30,7 @@ router.post("/tranferencia", async (req, res) => {
     try {
         const { emisor, receptor, monto } = req.body;
         const datos = [emisor, receptor, monto];
-        console.log(datos);
+
         const response = await addTransQuery(datos);
         res.status(200).json(response.rows);
     }
@@ -54,7 +54,7 @@ router.post("/usuario", async (req, res) => {
 });
 
 //transferencias GET: Devuelve todas las transferencias almacenadas en la base de datos en formato de arreglo 
-router.get ("/transferencia", async (req, res) => {
+router.get ("/transferencias", async (req, res) => {
 
     try {
         const { nombre, balance } = req.body;
@@ -103,20 +103,6 @@ router.put("/usuario", (req, res) => {
       
   }
 });
-
-
-
-
-/* 
- 
-
- 
-
-
-*/
-
-
-
 
 
 router.get("*", (req, res) => {

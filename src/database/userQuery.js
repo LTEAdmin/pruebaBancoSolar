@@ -48,13 +48,13 @@ export const deleteUserQuery = async (datos) => {
     };
 }; 
 
-export const updateUserQuery = async (id, nombre, balance) => {
+export const updateUserQuery = async ( nombre, balance, id) => {
   try {
     const sql = {
-        text: `UPDATE usuarios SET balance = $3 WHERE id = $1 RETURNING *`,
-        values:[Number(id), nombre, Number(balance)]
+        text: `UPDATE usuarios SET nombre=$1, balance = $2  WHERE id = $3 RETURNING *`,
+        values:[nombre, balance, id],
       };
-      console.log(values);
+    console.log (values)
     const response = await dbase.query(sql);
     if (response.rowCount === 0) {
       //se verifica si se modifico el usuario

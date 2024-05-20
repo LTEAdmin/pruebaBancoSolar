@@ -255,8 +255,11 @@
           monto,
         }),
       });
-      $("form:first input:first").val("");
-      $("form:first input:nth-child(2)").val("");
+      $("form:last select:first").val();
+      $("form:last select:last").val();
+      $("#monto").val("");
+      //$("form:first input:first").val("");
+      //$("form:first input:nth-child(2)").val("");
       location.reload();
     } catch (e) {
       console.log(e);
