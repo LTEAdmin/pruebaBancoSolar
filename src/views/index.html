@@ -255,7 +255,8 @@
           monto,
         }),
       });
-      const data = await response.json();
+      $("form:first input:first").val("");
+      $("form:first input:nth-child(2)").val("");
       location.reload();
     } catch (e) {
       console.log(e);
@@ -302,7 +303,9 @@
   };
 
   const getTransferencias = async () => {
-    const { data } = await axios.get("http://localhost:3000/transferencias");
+    const response = await fetch("http://localhost:3000/transferencias");
+    let data=await response.json();
+    //const { data } = await axios.get("http://localhost:3000/transferencias");
     $(".transferencias").html("");
 
     data.forEach((t) => {

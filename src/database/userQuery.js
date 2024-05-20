@@ -45,8 +45,31 @@ export const deleteUserQuery = async (datos) => {
     }
     catch (error) {
         console.log("Error: " + error);
-    }
+    };
 }; 
+
+export const updateUserQuery = async (id, nombre, balance) => {
+  try {
+    const sql = {
+        text: `UPDATE usuarios SET balance = $3 WHERE id = $1 RETURNING *`,
+        values:[Number(id), nombre, Number(balance)]
+      };
+      console.log(values);
+    const response = await dbase.query(sql);
+    if (response.rowCount === 0) {
+      //se verifica si se modifico el usuario
+      throw new Error("No se pudo modificar el usuario");
+    }
+    else {
+      response.rows[0];
+    };
+    return response.rows[0];
+  }
+    catch (error) {
+        console.log("Error: " + error);
+    };
+}; 
+
 // funcion para realizar prueba de ingreso de usuario
 //addUserQuery(["pedro", 2000]);
 //getUserQuery();
