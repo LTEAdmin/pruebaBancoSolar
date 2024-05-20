@@ -1,3 +1,5 @@
+Se comienza a trabajar la logica "antigua" de validacion y creacion de transaccion
+![image](https://github.com/LTEAdmin/pruebaBancoSolar/assets/157530292/16d7dd24-6c0e-436e-b844-46dc59d67e5f)
 
 
 Se revisa  la captura y guardado de las tarferencias,, determina correctmente nombres y mmontos
