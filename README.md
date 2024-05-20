@@ -1,4 +1,9 @@
 
+
+Se revisa  la captura y guardado de las tarferencias,, determina correctmente nombres y mmontos
+
+![image](https://github.com/LTEAdmin/pruebaBancoSolar/assets/157530292/0ee875f1-a34d-428e-b2d1-334190288284)
+
 [01_p_Prueba_-_Acceso_a_datos_en_aplicaciones_Node.pdf](https://github.com/LTEAdmin/pruebaBancoSolar/files/15370266/01_p_Prueba_-_Acceso_a_datos_en_aplicaciones_Node.pdf)
 
 Se inicia el desafio creando la BBDD solicitada
