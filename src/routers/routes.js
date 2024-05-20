@@ -1,6 +1,10 @@
 import express from "express";
 import path from "path";
-import { addUserQuery, getUserQuery } from "../database/userQuery.js";
+import {
+    addUserQuery,
+    getUserQuery,
+    deleteUserQuery
+} from "../database/userQuery.js";
 
 const router = express.Router();
 const __dirname = import.meta.dirname;
@@ -40,6 +44,18 @@ router.get("/usuarios", async (req, res) => {
     }
 });
 
+// - /usuario DELETE: Recibe el id de un usuario registrado y lo elimina . 
+router.delete("/usuario", async (req, res) => {
+    try {
+        const { id } = req.query;
+        const response = await deleteUserQuery(id);
+        res.status(200).send(response);
+    }
+    catch { 
+        res.status(500).send({ error: "Error al eliminar el usuario" });
+    }
+});
+
 // - /usuario PUT: Recibe el id de un usuario registrado y actualiza sus datos.
 router.put("/usuario", (req, res) => {
   try {
@@ -49,14 +65,7 @@ router.put("/usuario", (req, res) => {
   }
 });
 
-// - /usuario DELETE: Recibe el id de un usuario registrado y lo elimina . 
-router.delete("/usuario", (req, res) => {
-    try {
-    }
-    catch { 
 
-    }
-});
 
 
 /* 

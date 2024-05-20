@@ -26,7 +26,27 @@ export const getUserQuery = async () => {
     catch (error) {
         console.log("Error: " + error);
     }
-}
+};
+
+export const deleteUserQuery = async (datos) => {
+    try {
+        const sql = {
+          text: "DELETE FROM usuarios WHERE id = $1 RETURNING *",
+          values: [datos],
+        };
+        const response = await dbase.query(sql);
+        if (response.rowCount === 0) {  //se verifica si se elimino el usuario
+            throw new Error("No se pudo eliminar el usuario");
+        }
+        else { 
+            response.rows[0];
+        };
+        return response.rows[0];
+    }
+    catch (error) {
+        console.log("Error: " + error);
+    }
+}; 
 // funcion para realizar prueba de ingreso de usuario
 //addUserQuery(["pedro", 2000]);
 //getUserQuery();
